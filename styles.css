@@ -1,0 +1,142 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main content styles */
+main {
+    padding: 2rem;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Button styles */
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* New button styles */
+.btn-ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-neon {
+    box-shadow: 0 0 5px #007bff;
+}
+
+.btn-3d {
+    transform: translateY(0);
+    box-shadow: 0 5px 0 #0056b3;
+}
+
+.btn-morph {
+    transition: border-radius 0.3s ease;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    list-style: none;
+}
+
+.social-links li {
+    margin-left: 1rem;
+}
+
+.social-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Add these new keyframe animations */
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+@keyframes neon {
+    0% {
+        box-shadow: 0 0 5px #007bff;
+    }
+    50% {
+        box-shadow: 0 0 20px #007bff, 0 0 30px #007bff;
+    }
+    100% {
+        box-shadow: 0 0 5px #007bff;
+    }
+}
+
+@keyframes morph {
+    0%, 100% {
+        border-radius: 5px;
+    }
+    50% {
+        border-radius: 50%;
+    }
+}
